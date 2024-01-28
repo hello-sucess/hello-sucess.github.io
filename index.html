@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>hello this is my blog</title>
+</head>
+
+<body>
+    <div class="box">
+        <div class="left"></div>
+        <div class="right">
+            <h4>Login</h4>
+            <form action="#">
+                <input class="acc" type="text" placeholder="username">
+                <input class="acc" type="password" placeholder="password">
+                <input class="submit" type="submit" onclick="Login();" value="Login">
+            </form>
+        </div>
+    </div>
+    <script>
+        function Login(){
+            var userValue = document.getElementsByClassName("acc")[0].value;
+            var passValue = document.getElementsByClassName("acc")[1].value;
+
+            if(userValue ==  "admin" && passValue == "123456"){
+                event.preventDefault()
+                self.location='./admin/profile.html';
+            }else{
+                alert("密码错误,请重试");
+            } 
+        }
+
+    </script>
+</body>
+
+</html>
+
